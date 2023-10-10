@@ -1,0 +1,164 @@
+@import "../_mixins.scss";
+@import "../_variables";
+
+body {
+  box-sizing: border-box;
+  margin: 0 auto;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  @include button-main;
+}
+
+.header {
+  margin-bottom: 26px;
+  background-color: $action-hover-4-p;
+  &__container {
+    @include container;
+    padding: 56px 0 0;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 36px;
+    .header__descr {
+      .header__title {
+        margin-bottom: 10px;
+        font-size: 36px;
+      }
+    }
+
+    .header__button {
+      @include button-main;
+    }
+
+    .header__button:hover {
+      @include button-hover;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    .header__button_low {
+      width: 165px;
+      background-color: transparent;
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid $primary-main;
+      color: $primary-main;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .header__button_low--disabled {
+      border: none;
+      color: $text-disabled;
+    }
+  }
+}
+
+.posts {
+  &__container {
+    @include container;
+  }
+
+  .posts__table {
+    width: 100%;
+    // border-spacing: 0 28.5px;
+    .table__row {
+      th {
+        padding: 0 0 30px 0;
+        text-align: start;
+        font-size: 14px;
+      }
+
+      th:last-child {
+        padding-left: 10px;
+      }
+
+      &__column_2 {
+        width: 27%;
+        time {
+          padding-left: 18px;
+        }
+      }
+
+      &__column_3 {
+        width: 8.3%;
+      }
+
+      &__column {
+        padding: 0 0 22px 0;
+        &__block {
+          display: flex;
+          gap: 15px;
+          align-items: center;
+
+          &_img {
+            border-radius: 4px;
+          }
+
+          &_main {
+            font-size: 14px;
+          }
+        }
+
+        &__block_2 {
+          gap: 8px;
+          margin-bottom: 5px;
+        }
+
+        &__block_buttons {
+          gap: 0;
+          justify-content: space-around;
+        }
+      }
+
+      .column__small {
+        font-size: 12px;
+        color: $text-disabled;
+      }
+    }
+
+    .table__links-item {
+      @include button-reset;
+      width: 48px;
+      height: 48px;
+      border-radius: 40px;
+      transition: background-color 0.3s ease-in-out;
+
+      svg {
+        fill: $text-secondary-54-p;
+        transition: fill 0.3s ease-in-out;
+      }
+    }
+
+    .table__links-item:hover {
+      background-color: $primary-hover-4-p;
+      svg {
+        fill: $primary-main;
+      }
+    }
+
+    .table__links-item:active {
+      background-color: $primary-active-24-p;
+    }
+  }
+}

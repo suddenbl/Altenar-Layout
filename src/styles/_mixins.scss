@@ -1,0 +1,39 @@
+@import "_variables.scss";
+
+@mixin container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+@mixin button-main {
+  display: flex;
+  width: 160px;
+  height: 47px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 1px solid $primary-main;
+  border-radius: 7px;
+  background-color: $primary-main;
+  color: $primary-contast-text;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+@mixin button-hover {
+  background-color: $primary-dark;
+}
+
+@mixin button-disabled {
+  background-color: $text-disabled;
+  color: rgba(0, 0, 0, 0.26);
+}
+
+@mixin button-reset {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
