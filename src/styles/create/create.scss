@@ -68,20 +68,16 @@ a {
   }
 }
 
-main {
-  overflow-y: scroll;
-  height: 100vh;
-}
-
 .creation {
   &__container {
     @include container;
   }
 
-  &__test {
+  &__container__2 {
     width: 37%;
     overflow-y: scroll;
     height: 70vh;
+    padding: 0 2px;
   }
 
   &__title {

@@ -40,7 +40,7 @@ button {
   background-color: rgba(0, 0, 0, 0.04);
 }
 .header__container {
-  max-width: 1300px;
+  width: 1300px;
   margin: 0 auto;
   padding: 56px 0 0;
 }
@@ -89,7 +89,7 @@ button {
 }
 
 .posts__container {
-  max-width: 1300px;
+  width: 1300px;
   margin: 0 auto;
 }
 .posts .posts__table {
