@@ -1,9 +1,12 @@
 @import "../_mixins.scss";
 @import "../_variables";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   position: relative;
-  box-sizing: border-box;
   margin: 0 auto;
   background-color: white;
   font-family: "Roboto", sans-serif;
@@ -27,7 +30,7 @@ a {
 }
 
 .header {
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
   background-color: $action-hover-4-p;
   &__container {
     @include container;
@@ -68,16 +71,26 @@ a {
   }
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+}
+
 .creation {
   &__container {
     @include container;
+    padding: 30px 0;
   }
 
   &__container__2 {
-    width: 37%;
+    width: 36.8%;
     overflow-y: scroll;
-    height: 70vh;
+    height: 65vh;
     padding: 0 2px;
+  }
+
+  &__block {
+    width: 94.5%;
   }
 
   &__title {
@@ -100,9 +113,8 @@ a {
 
   &__content {
     display: flex;
-    margin-bottom: 36px;
+    margin-bottom: 35px;
     flex-direction: column;
-    width: 93.5%;
     gap: 18px;
 
     &__span {
@@ -112,13 +124,13 @@ a {
 
       input {
         // position: absolute;
-        width: 95%;
+        width: 100%;
       }
 
       &__descr {
         position: absolute;
         top: 20px;
-        right: 10px;
+        right: 12px;
         color: $text-secondary-54-p;
       }
     }
@@ -137,7 +149,6 @@ a {
   }
 
   &__download {
-    width: 93.5%;
     margin-bottom: 35px;
     &__title {
       margin-bottom: 16px;
@@ -146,7 +157,7 @@ a {
     .block {
       display: flex;
       gap: 17px;
-      padding: 35px 35px;
+      padding: 35px 27px 35px 35px;
       border: 1px dashed #000;
 
       &__button {
@@ -254,7 +265,7 @@ a {
         width: 100%;
 
         input {
-          width: 94%;
+          width: 100%;
           padding: 17px 11px;
           border: none;
           border: 1px solid $grey-300;
@@ -298,7 +309,7 @@ a {
 
         &__descr {
           max-width: 80%;
-          margin-bottom: 32px;
+          // margin-bottom: 32px;
           font-size: 12px;
           font-weight: 400;
           line-height: normal;
@@ -313,7 +324,6 @@ a {
 
 .divider {
   margin-bottom: 30px;
-  width: 451px;
   height: 1px;
   padding-top: 1px;
   background-color: $grey-300;
@@ -325,31 +335,34 @@ a {
   right: 17px;
   width: 59%;
   background-color: $grey-900;
-  border-radius: 10px;
+  border-radius: 14px;
 
   &__container {
     @include container;
-    max-width: 356px;
-    padding: 93px 0 139px;
+    display: flex;
+    max-width: 355px;
+    height: 92.7vh;
+    align-items: center;
   }
 
   .content {
+    height: 73.4%;
     background: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0) 0%,
       #9197a3 22.4%,
       #9197a3 100%
     );
-    border-radius: 40px 40px 40px 40px;
+    border-radius: 40px 40px 48px 48px;
     &__display {
       display: flex;
       flex-direction: column;
-      height: 586px;
+      height: 100%;
       align-items: center;
       justify-content: space-between;
-      padding: 15px 25px;
-      border: 8px solid #e4e4e4;
-      border-radius: 45px;
+      padding: 10px 19px;
+      border: 13px solid #e4e4e4;
+      border-radius: 47px;
       background-image: url("../../img/onion.png");
       background-repeat: no-repeat;
 
@@ -358,7 +371,7 @@ a {
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        margin-bottom: 85px;
+        // margin-bottom: auto;
 
         &__time {
           color: $primary-contast-text;
@@ -371,8 +384,6 @@ a {
 
       .bottom {
         width: 100%;
-        align-self: flex-start;
-
         border-radius: 0px 0px 40px 40px;
 
         &__title {

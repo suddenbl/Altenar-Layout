@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   box-sizing: border-box;
   margin: 0 auto;
@@ -22,13 +28,13 @@ a {
 
 button {
   display: flex;
-  width: 160px;
-  height: 47px;
+  width: 158px;
+  height: 42px;
   align-items: center;
   justify-content: center;
   gap: 5px;
   border: 1px solid #2196f3;
-  border-radius: 7px;
+  border-radius: 4px;
   background-color: #2196f3;
   color: #ffffff;
   cursor: pointer;
@@ -42,26 +48,29 @@ button {
 .header__container {
   width: 1300px;
   margin: 0 auto;
-  padding: 56px 0 0;
+  padding: 59px 0 0;
 }
 .header__top {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 36px;
+  margin-bottom: 41px;
 }
 .header__top .header__descr .header__title {
-  margin-bottom: 10px;
+  margin-bottom: 17px;
   font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
 }
 .header__top .header__button {
   display: flex;
-  width: 160px;
-  height: 47px;
+  width: 158px;
+  height: 42px;
   align-items: center;
   justify-content: center;
   gap: 5px;
   border: 1px solid #2196f3;
-  border-radius: 7px;
+  border-radius: 4px;
   background-color: #2196f3;
   color: #ffffff;
   cursor: pointer;
@@ -74,14 +83,25 @@ button {
   display: flex;
 }
 .header__bottom .header__button_low {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
   width: 165px;
+  padding-bottom: 5px;
   background-color: transparent;
   border: none;
   border-radius: 0;
   border-bottom: 1px solid #2196f3;
   color: #2196f3;
   font-size: 14px;
+  font-style: normal;
   font-weight: 500;
+  line-height: 26px; /* 173.333% */
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
 }
 .header__bottom .header__button_low--disabled {
   border: none;
@@ -100,17 +120,14 @@ button {
   text-align: start;
   font-size: 14px;
 }
-.posts .posts__table .table__row th:last-child {
-  padding-left: 10px;
-}
 .posts .posts__table .table__row__column_2 {
-  width: 27%;
+  width: 27.8%;
 }
 .posts .posts__table .table__row__column_2 time {
   padding-left: 18px;
 }
 .posts .posts__table .table__row__column_3 {
-  width: 8.3%;
+  width: 7.3%;
 }
 .posts .posts__table .table__row__column {
   padding: 0 0 22px 0;
@@ -132,7 +149,7 @@ button {
 }
 .posts .posts__table .table__row__column__block_buttons {
   gap: 0;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .posts .posts__table .table__row .column__small {
   font-size: 12px;
@@ -145,8 +162,8 @@ button {
   color: inherit;
   background-color: transparent;
   cursor: pointer;
-  width: 48px;
-  height: 48px;
+  width: 24px;
+  height: 24px;
   border-radius: 40px;
   transition: background-color 0.3s ease-in-out;
 }
@@ -162,4 +179,7 @@ button {
 }
 .posts .posts__table .table__links-item:active {
   background-color: rgba(33, 150, 243, 0.24);
+}
+.posts .posts__table .table__links-item:active svg {
+  fill: #2196f3;
 }/*# sourceMappingURL=main.css.map */

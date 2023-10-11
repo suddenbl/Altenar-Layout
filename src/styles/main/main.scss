@@ -1,6 +1,12 @@
 @import "../_mixins.scss";
 @import "../_variables";
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   box-sizing: border-box;
   margin: 0 auto;
@@ -32,17 +38,20 @@ button {
   background-color: $action-hover-4-p;
   &__container {
     @include container;
-    padding: 56px 0 0;
+    padding: 59px 0 0;
   }
 
   &__top {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 36px;
+    margin-bottom: 41px;
     .header__descr {
       .header__title {
-        margin-bottom: 10px;
+        margin-bottom: 17px;
         font-size: 36px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 32px;
       }
     }
 
@@ -58,14 +67,20 @@ button {
   &__bottom {
     display: flex;
     .header__button_low {
+      @include button-reset;
       width: 165px;
+      padding-bottom: 5px;
       background-color: transparent;
       border: none;
       border-radius: 0;
       border-bottom: 1px solid $primary-main;
       color: $primary-main;
       font-size: 14px;
+      font-style: normal;
       font-weight: 500;
+      line-height: 26px; /* 173.333% */
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
     }
     .header__button_low--disabled {
       border: none;
@@ -81,7 +96,6 @@ button {
 
   .posts__table {
     width: 100%;
-    // border-spacing: 0 28.5px;
     .table__row {
       th {
         padding: 0 0 30px 0;
@@ -89,19 +103,15 @@ button {
         font-size: 14px;
       }
 
-      th:last-child {
-        padding-left: 10px;
-      }
-
       &__column_2 {
-        width: 27%;
+        width: 27.8%;
         time {
           padding-left: 18px;
         }
       }
 
       &__column_3 {
-        width: 8.3%;
+        width: 7.3%;
       }
 
       &__column {
@@ -127,7 +137,7 @@ button {
 
         &__block_buttons {
           gap: 0;
-          justify-content: space-around;
+          justify-content: space-between;
         }
       }
 
@@ -139,8 +149,8 @@ button {
 
     .table__links-item {
       @include button-reset;
-      width: 48px;
-      height: 48px;
+      width: 24px;
+      height: 24px;
       border-radius: 40px;
       transition: background-color 0.3s ease-in-out;
 
@@ -159,6 +169,9 @@ button {
 
     .table__links-item:active {
       background-color: $primary-active-24-p;
+      svg {
+        fill: $primary-main;
+      }
     }
   }
 }
