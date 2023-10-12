@@ -30,7 +30,6 @@ a {
 }
 
 .header {
-  // margin-bottom: 30px;
   background-color: $action-hover-4-p;
   &__container {
     @include container;
@@ -61,8 +60,10 @@ a {
       display: inline-block;
       max-width: 27%;
       font-size: $font-size-normal;
+      font-weight: 400;
       line-height: 20px;
       letter-spacing: $letter-spacing;
+      color: $text-secondary-54-p;
 
       .header__text_link {
         color: $primary-main;
@@ -168,6 +169,7 @@ main {
 
       &__guide {
         font-size: 14px;
+        font-weight: 400;
         line-height: 20px;
         letter-spacing: $letter-spacing;
 
@@ -275,7 +277,7 @@ main {
         button {
           @include button-reset;
           display: flex;
-          width: 99%;
+          width: 100%;
           padding: 17px 11px;
           align-items: center;
           gap: 10px;

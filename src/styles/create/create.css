@@ -55,8 +55,10 @@ a {
   display: inline-block;
   max-width: 27%;
   font-size: 14px;
+  font-weight: 400;
   line-height: 20px;
   letter-spacing: 0.15px;
+  color: rgba(0, 0, 0, 0.54);
 }
 .header__descr .header__text .header__text_link {
   color: #2196f3;
@@ -151,6 +153,7 @@ main {
 }
 .creation__download .block__guide {
   font-size: 14px;
+  font-weight: 400;
   line-height: 20px;
   letter-spacing: 0.15px;
 }
@@ -254,7 +257,7 @@ main {
   background-color: transparent;
   cursor: pointer;
   display: flex;
-  width: 99%;
+  width: 100%;
   padding: 17px 11px;
   align-items: center;
   gap: 10px;
