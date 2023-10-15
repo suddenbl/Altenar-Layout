@@ -5,11 +5,11 @@
 }
 
 body {
-  box-sizing: border-box;
   margin: 0 auto;
   background-color: white;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  font-weight: 400;
 }
 
 p,
@@ -42,7 +42,7 @@ button {
 }
 
 .header {
-  margin-bottom: 26px;
+  margin-bottom: 24px;
   background-color: rgba(0, 0, 0, 0.04);
 }
 .header__container {
@@ -61,6 +61,13 @@ button {
   font-style: normal;
   font-weight: 500;
   line-height: 32px;
+}
+.header__top .header__descr .header__text {
+  color: rgba(0, 0, 0, 0.54);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.15px;
 }
 .header__top .header__button {
   display: flex;
@@ -116,9 +123,10 @@ button {
   width: 100%;
 }
 .posts .posts__table .table__row th {
-  padding: 0 0 30px 0;
+  padding: 0 0 28px 0;
   text-align: start;
   font-size: 14px;
+  font-weight: 500;
 }
 .posts .posts__table .table__row__column_2 {
   width: 27.8%;
@@ -144,8 +152,8 @@ button {
   font-size: 14px;
 }
 .posts .posts__table .table__row__column__block_2 {
+  padding-top: 3px;
   gap: 8px;
-  margin-bottom: 5px;
 }
 .posts .posts__table .table__row__column__block_buttons {
   gap: 0;
