@@ -3,6 +3,7 @@
 
 * {
   box-sizing: border-box;
+  letter-spacing: 0.15px;
 }
 
 body {
@@ -41,8 +42,7 @@ a {
     margin-bottom: 95px;
     gap: 8px;
     font-size: $font-size-normal;
-    line-height: 20px; /* 142.857% */
-    letter-spacing: $letter-spacing;
+    line-height: 20px;
     color: $text-secondary-54-p;
   }
 
@@ -52,17 +52,14 @@ a {
       font-size: 36px;
       font-style: normal;
       font-weight: 500;
-      line-height: 32px; /* 88.889% */
-      letter-spacing: $letter-spacing;
+      line-height: 32px;
     }
 
     .header__text {
       display: inline-block;
       max-width: 27%;
       font-size: $font-size-normal;
-      font-weight: 400;
       line-height: 20px;
-      letter-spacing: $letter-spacing;
       color: $text-secondary-54-p;
 
       .header__text_link {
@@ -99,17 +96,14 @@ main {
     margin-bottom: 5px;
     font-size: 20px;
     font-weight: 500;
-    line-height: 32px; /* 160% */
-    letter-spacing: $letter-spacing;
+    line-height: 32px;
   }
 
   &__descr {
     color: $text-secondary-54-p;
     margin-bottom: 23px;
     font-size: $font-size-normal;
-    font-weight: 400;
-    line-height: 20px; /* 142.857% */
-    letter-spacing: $letter-spacing;
+    line-height: 20px;
   }
 
   &__content {
@@ -124,7 +118,6 @@ main {
       width: 100%;
 
       input {
-        // position: absolute;
         width: 100%;
       }
 
@@ -147,6 +140,11 @@ main {
     textarea {
       resize: none;
     }
+
+    input:focus,
+    textarea:focus {
+      outline: 1px solid $primary-main;
+    }
   }
 
   &__download {
@@ -154,96 +152,124 @@ main {
     &__title {
       margin-bottom: 16px;
     }
-
-    .block {
-      display: flex;
-      gap: 17px;
-      padding: 35px 27px 35px 35px;
-      border: 1px dashed #000;
-
-      &__button {
-        @include button-reset;
-        width: 31px;
-        height: 38px;
-      }
-
-      &__guide {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 20px;
-        letter-spacing: $letter-spacing;
-
-        a {
-          color: $primary-main;
+    .download__block {
+      .wrap {
+        position: relative;
+        border: 1px dashed $text-disabled;
+        padding: 35px 37px 30px;
+        display: flex;
+        gap: 16px;
+        &__input {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          padding: 0;
+          border: 0;
+          outline: 0;
+          opacity: 0;
+          cursor: pointer;
         }
-
-        small {
-          font-size: 12px;
-          font-weight: 400;
-          line-height: normal;
-          letter-spacing: 0.4px;
+        .wrap__content {
+          .wrap__content__text {
+            font-size: 14px;
+            line-height: 20px;
+            &_2 {
+              color: $primary-main;
+            }
+            &_3 {
+              font-size: 12px;
+              color: $text-secondary-54-p;
+            }
+          }
         }
       }
     }
   }
 
   &__color {
-    &__button {
-      @include button-reset;
-      width: 40px;
-      height: 40px;
+    &__input {
+      width: 50px;
+      height: 50px;
       margin-bottom: 32px;
+      border: none;
       border-radius: 48px;
-      background-color: #9197a3;
+      background-color: transparent;
     }
 
-    &__button:active {
-      outline-offset: 1px;
+    &__input::-webkit-color-swatch {
+      border-radius: 48px;
+    }
+
+    &__input::-moz-color-swatch {
+      border-radius: 48px;
+    }
+
+    &__input:active {
       outline: 1px solid #c4c4c4;
     }
   }
 
   &__read {
     max-width: 93.5%;
-
     &__descr {
       margin-bottom: 24px;
     }
-
-    .button-block {
+    .switch {
       display: flex;
       align-items: center;
       gap: 10px;
-      margin-bottom: 33px;
-
-      p {
+      margin-bottom: 32px;
+      .switch__text {
+        color: $text-primary;
         font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
         letter-spacing: 0.4px;
       }
-
-      &__text_black {
-        color: $text-primary;
-      }
-
-      &__text_light {
+      .switch__text_2 {
         color: $text-disabled;
       }
 
-      &__button {
+      .switch__label {
         position: relative;
-        @include button-reset;
+        display: inline-block;
         width: 50px;
         height: 23px;
-        background-color: $warning-contrast-text;
-        border-radius: 33px;
-
-        svg {
+        &__input {
+          display: none;
+        }
+        &__slider {
           position: absolute;
-          top: 3px;
-          left: 5px;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: $grey-900;
+          border-radius: 33px;
+          cursor: pointer;
+        }
+
+        &__slider::before {
+          position: absolute;
+          content: "";
+          height: 17px;
+          width: 17px;
+          left: 3px;
+          bottom: 3px;
+          background-color: $primary-contast-text;
+          border-radius: 17px;
+          transition: transform 0.3s ease-in-out;
+        }
+
+        .switch__label__input:checked + .switch__label__slider:before {
+          transform: translateX(26px);
+          filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.12))
+            drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.14))
+            drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.2));
+        }
+
+        .switch__label__input:checked + .switch__label__slider {
+          background-color: $grey-300;
         }
       }
     }
@@ -252,39 +278,54 @@ main {
   &__link {
     max-width: 93.5%;
 
-    &__descr {
-      margin-bottom: 25px;
-    }
-
     &__form {
       display: flex;
       flex-direction: column;
       gap: 17px;
 
-      span {
+      .link__form__span {
         position: relative;
         display: inline-block;
         width: 100%;
 
-        input {
+        &__input {
           width: 100%;
           padding: 17px 11px;
-          border: none;
           border: 1px solid $grey-300;
           border-radius: 4px;
         }
 
-        button {
-          @include button-reset;
-          display: flex;
-          width: 100%;
-          padding: 17px 11px;
-          align-items: center;
-          gap: 10px;
-          outline: 1px solid $grey-300;
-          border-radius: 4px;
-          color: $text-secondary-54-p;
+        input:focus {
+          outline: 1px solid $primary-main;
         }
+
+        .span__label__input {
+          position: absolute;
+          opacity: 0;
+          overflow: hidden;
+          z-index: -1;
+        }
+
+        img {
+          position: absolute;
+          top: 16px;
+          left: 10px;
+        }
+
+        .link__form__span__description {
+          position: absolute;
+          top: 20px;
+          right: 12px;
+          color: $text-disabled;
+        }
+      }
+
+      .link__form__span_last {
+        margin-bottom: 50px;
+      }
+
+      .form__span__label__input_last {
+        padding-left: 40px;
       }
 
       .span-last {
@@ -299,10 +340,14 @@ main {
         &__button {
           @include button-reset;
           width: 100%;
-          padding: 11px 22px;
+          padding: 8px 22px;
           background-color: $primary-main;
           color: $primary-contast-text;
           border-radius: 4px;
+          font-size: 15px;
+          font-weight: 500;
+          line-height: 26px;
+          letter-spacing: 0.3px;
         }
 
         &__button:hover {
@@ -310,8 +355,8 @@ main {
         }
 
         &__descr {
+          margin-bottom: 30px;
           max-width: 80%;
-          // margin-bottom: 32px;
           font-size: 12px;
           font-weight: 400;
           line-height: normal;
@@ -325,8 +370,9 @@ main {
 }
 
 .divider {
-  margin-bottom: 30px;
+  width: 95%;
   height: 1px;
+  margin-bottom: 30px;
   padding-top: 1px;
   background-color: $grey-300;
 }
@@ -336,6 +382,7 @@ main {
   top: 16px;
   right: 17px;
   width: 59%;
+  max-width: 1080px;
   background-color: $grey-900;
   border-radius: 14px;
 
@@ -365,7 +412,7 @@ main {
       padding: 10px 19px;
       border: 13px solid #e4e4e4;
       border-radius: 47px;
-      background-image: url("../../img/onion.png");
+      background-image: url("../../assets/images/onion.png");
       background-repeat: no-repeat;
 
       .top {
@@ -373,7 +420,6 @@ main {
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        // margin-bottom: auto;
 
         &__time {
           color: $primary-contast-text;
@@ -392,8 +438,7 @@ main {
           margin-bottom: 8px;
           font-size: 20px;
           font-weight: 500;
-          line-height: 32px; /* 160% */
-          letter-spacing: $letter-spacing;
+          line-height: 32px;
         }
         &__descr {
           display: inline-block;
@@ -401,8 +446,7 @@ main {
           height: 184px;
           font-size: $font-size-normal;
           font-weight: 400;
-          line-height: 20px; /* 142.857% */
-          letter-spacing: $letter-spacing;
+          line-height: 20px;
         }
       }
     }

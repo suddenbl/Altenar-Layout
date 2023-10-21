@@ -5,6 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  letter-spacing: 0.15px;
 }
 
 body {
@@ -58,7 +59,6 @@ button {
         font-style: normal;
         font-weight: 400;
         line-height: 20px;
-        letter-spacing: $letter-spacing;
       }
     }
 
@@ -85,7 +85,7 @@ button {
       font-size: 14px;
       font-style: normal;
       font-weight: 500;
-      line-height: 26px; /* 173.333% */
+      line-height: 26px;
       letter-spacing: 0.3px;
       text-transform: uppercase;
     }
@@ -141,7 +141,6 @@ button {
         &__block_2 {
           padding-top: 3px;
           gap: 8px;
-          // margin-bottom: 5px;
         }
 
         &__block_buttons {
@@ -172,14 +171,16 @@ button {
     .table__links-item:hover {
       background-color: $primary-hover-4-p;
       svg {
-        fill: $primary-main;
+        filter: invert(70%) sepia(65%) saturate(6190%) hue-rotate(185deg)
+          brightness(97%) contrast(96%);
       }
     }
 
     .table__links-item:active {
       background-color: $primary-active-24-p;
       svg {
-        fill: $primary-main;
+        filter: invert(70%) sepia(65%) saturate(6190%) hue-rotate(185deg)
+          brightness(97%) contrast(96%);
       }
     }
   }
