@@ -27,6 +27,98 @@ a {
   text-decoration: none;
 }
 
+.creation__test .wrap {
+  position: relative;
+  border: 1px dashed #f44336;
+  padding: 35px 37px 30px;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 50px;
+}
+.creation__test .wrap__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.creation__test .wrap .wrap__content .wrap__content__text {
+  font-size: 14px;
+  line-height: 20px;
+}
+.creation__test .wrap .wrap__content .wrap__content__text_2 {
+  color: #2196f3;
+}
+.creation__test .wrap .wrap__content .wrap__content__text_3 {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.54);
+}
+.creation__test .wrap .wrap__content__error {
+  position: absolute;
+  bottom: -23px;
+  left: 110px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px; /* 140% */
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), #f44336;
+  color: rgb(125, 23, 35);
+}
+.creation__test .creation__content__span {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.creation__test .creation__content__span input {
+  width: 100%;
+}
+.creation__test .creation__content__span__description {
+  position: absolute;
+  top: 20px;
+  right: 12px;
+  color: rgba(0, 0, 0, 0.54);
+}
+.creation__test .creation__content__span__error {
+  position: absolute;
+  bottom: -22px;
+  left: 2px;
+  color: #f44336;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 166.667% */
+  letter-spacing: 0.4px;
+}
+.creation__test input {
+  padding: 17px 11px;
+  border: none;
+  border: 1px solid #f44336;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 1px;
+  border-radius: 10px;
+  background-color: #bdbdbd;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
 .header {
   background-color: rgba(0, 0, 0, 0.04);
 }
@@ -43,21 +135,21 @@ a {
   line-height: 20px;
   color: rgba(0, 0, 0, 0.54);
 }
-.header__descr .header__title {
+.header__description__title {
   margin-bottom: 15px;
   font-size: 36px;
   font-style: normal;
   font-weight: 500;
   line-height: 32px;
 }
-.header__descr .header__text {
+.header__description__text {
   display: inline-block;
   max-width: 27%;
   font-size: 14px;
   line-height: 20px;
   color: rgba(0, 0, 0, 0.54);
 }
-.header__descr .header__text .header__text_link {
+.header__description__text__link {
   color: #2196f3;
 }
 
@@ -87,7 +179,7 @@ main {
   font-weight: 500;
   line-height: 32px;
 }
-.creation__descr {
+.creation__description {
   color: rgba(0, 0, 0, 0.54);
   margin-bottom: 23px;
   font-size: 14px;
@@ -107,7 +199,7 @@ main {
 .creation__content__span input {
   width: 100%;
 }
-.creation__content__span__descr {
+.creation__content__span__description {
   position: absolute;
   top: 20px;
   right: 12px;
@@ -183,7 +275,7 @@ main {
 .creation__read {
   max-width: 93.5%;
 }
-.creation__read__descr {
+.creation__read__description {
   margin-bottom: 24px;
 }
 .creation__read .switch {
@@ -193,7 +285,7 @@ main {
   margin-bottom: 32px;
 }
 .creation__read .switch .switch__text {
-  color: rgba(0, 0, 0, 0.8705882353);
+  color: #000;
   font-size: 12px;
   letter-spacing: 0.4px;
 }
@@ -226,7 +318,7 @@ main {
   width: 17px;
   left: 3px;
   bottom: 3px;
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 17px;
   transition: transform 0.3s ease-in-out;
 }
@@ -237,61 +329,61 @@ main {
 .creation__read .switch .switch__label .switch__label__input:checked + .switch__label__slider {
   background-color: #e0e0e0;
 }
-.creation__link {
+.creation__links {
   max-width: 93.5%;
 }
-.creation__link__form {
+.creation__links__form {
   display: flex;
   flex-direction: column;
   gap: 17px;
 }
-.creation__link__form .link__form__span {
+.creation__links__form .links__form__block {
   position: relative;
   display: inline-block;
   width: 100%;
 }
-.creation__link__form .link__form__span__input {
+.creation__links__form .links__form__block__input {
   width: 100%;
   padding: 17px 11px;
   border: 1px solid #e0e0e0;
   border-radius: 4px;
 }
-.creation__link__form .link__form__span input:focus {
+.creation__links__form .links__form__block input:focus {
   outline: 1px solid #2196f3;
 }
-.creation__link__form .link__form__span .span__label__input {
+.creation__links__form .links__form__block .block__label__input {
   position: absolute;
   opacity: 0;
   overflow: hidden;
   z-index: -1;
 }
-.creation__link__form .link__form__span img {
+.creation__links__form .links__form__block img {
   position: absolute;
   top: 16px;
   left: 10px;
 }
-.creation__link__form .link__form__span .link__form__span__description {
+.creation__links__form .links__form__block .links__form__block__description {
   position: absolute;
   top: 20px;
   right: 12px;
   color: rgba(0, 0, 0, 0.38);
 }
-.creation__link__form .link__form__span_last {
+.creation__links__form .links__form__block_last {
   margin-bottom: 50px;
 }
-.creation__link__form .form__span__label__input_last {
+.creation__links__form .form__block__label__input_last {
   padding-left: 40px;
 }
-.creation__link__form .span-last {
+.creation__links__form .block-last {
   margin-bottom: 46px;
 }
-.creation__link__form .submit-block {
+.creation__links__form .submit-block {
   display: flex;
   flex-direction: column;
   gap: 16px;
   align-items: center;
 }
-.creation__link__form .submit-block__button {
+.creation__links__form .submit-block__button {
   padding: 0;
   border: none;
   font: inherit;
@@ -301,17 +393,17 @@ main {
   width: 100%;
   padding: 8px 22px;
   background-color: #2196f3;
-  color: #ffffff;
+  color: #fff;
   border-radius: 4px;
   font-size: 15px;
   font-weight: 500;
   line-height: 26px;
   letter-spacing: 0.3px;
 }
-.creation__link__form .submit-block__button:hover {
+.creation__links__form .submit-block__button:hover {
   background-color: #0b79d0;
 }
-.creation__link__form .submit-block__descr {
+.creation__links__form .submit-block__description {
   margin-bottom: 30px;
   max-width: 80%;
   font-size: 12px;
@@ -371,7 +463,7 @@ main {
   width: 100%;
 }
 .preview .content__display .top__time {
-  color: #ffffff;
+  color: #fff;
   font-size: 11px;
   font-style: normal;
   font-weight: 600;

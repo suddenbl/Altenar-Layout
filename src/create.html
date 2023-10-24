@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="./styles/create/create.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
@@ -23,12 +21,12 @@
           <img src="./assets/images/arrow.svg" alt="arrow" />
           Вернуться к списку
         </a>
-        <div class="header__descr">
-          <h1 class="header__title">Создайте подборку</h1>
-          <p class="header__text">
+        <div class="header__description">
+          <h1 class="header__description__title">Создайте подборку</h1>
+          <p class="header__description__text">
             Перед началом ознакомьтесь с
-            <a class="header__text_link" href="#">гайдлайнами</a>, где вы
-            найдете примеры правильного оформления
+            <a class="header__description__text__link" href="#">гайдлайнами</a>,
+            где вы найдете примеры правильного оформления
           </p>
         </div>
       </div>
@@ -37,11 +35,11 @@
       <section class="creation">
         <div class="creation__container">
           <div class="creation__container__2">
-            <div class="creation__descr creation__block">
-              <h3 class="creation__descr__title creation__title">
+            <div class="creation__description creation__block">
+              <h3 class="creation__description__title creation__title">
                 Расскажите о подборке
               </h3>
-              <p class="creation__descr__text creation__descr">
+              <p class="creation__description__text creation__description">
                 Желательно сделать это кратко и ёмко
               </p>
             </div>
@@ -49,15 +47,15 @@
               <span class="creation__content__span">
                 <input
                   type="text"
-                  name="descr"
+                  name="description"
                   id=""
                   placeholder="Дескриптор"
                 />
-                <span class="creation__content__span__descr">30</span>
+                <span class="creation__content__span__description">30</span>
               </span>
               <span class="creation__content__span">
                 <input type="text" name="name" id="" placeholder="Название" />
-                <span class="creation__content__span__descr">50</span>
+                <span class="creation__content__span__description">50</span>
               </span>
               <textarea
                 name="description"
@@ -65,6 +63,7 @@
                 cols="30"
                 rows="5"
                 placeholder="Описание"
+                value=""
               ></textarea>
             </form>
             <div class="divider"></div>
@@ -114,7 +113,7 @@
               <h3 class="creation__color__title creation__title">
                 Выберите цвет
               </h3>
-              <p class="creation__color__descr creation__descr">
+              <p class="creation__color__descr creation__description">
                 Лучше всего подойдет цвет преобладающий на обложке
               </p>
               <input
@@ -128,7 +127,7 @@
               <h3 class="creation__read__title creation__title">
                 Проверьте читабельность
               </h3>
-              <p class="creation__read__descr creation__descr">
+              <p class="creation__read__description creation__description">
                 Выберите цвет интерфейса, который будет контрастнее смотреться
                 на выбранном ранее фоне
               </p>
@@ -146,46 +145,83 @@
               </div>
             </div>
             <div class="divider"></div>
-            <div class="creation__link creation__block">
-              <h3 class="creation__link__title creation__title">
+            <div class="creation__links creation__block">
+              <h3 class="creation__links__title creation__title">
                 Оставьте ссылку
               </h3>
-              <p class="creation__link__descr creation__descr">
+              <p class="creation__links__description creation__description">
                 Лучше всего ссылаться на каталог вашего магазина или
                 <br />
                 промо-страницу
               </p>
-              <form action="#" class="creation__link__form link__form">
-                <span class="link__form__span">
+              <form action="#" class="creation__links__form links__form">
+                <span class="links__form__block">
                   <input
-                    class="link__form__span__input"
+                    class="links__form__block__input"
                     type="text"
                     placeholder="Название"
                   />
-                  <span class="link__form__span__description">30</span>
+                  <span class="links__form__block__description">30</span>
                 </span>
-                <span class="link__form__span form__span link__form__span_last">
-                  <label for="link" class="form__span__label">
+                <span
+                  class="links__form__block form__block links__form__block_last"
+                >
+                  <label for="links" class="form__block__label">
                     <img src="./assets/images/clip.svg" alt="clip" />
                     <input
-                      class="link__form__span__input form__span__label__input_last"
+                      class="links__form__block__input form__block__label__input_last"
                       type="text"
                       placeholder="Ссылка"
-                      id="link"
+                      id="links"
                     />
                   </label>
-                  <span class="link__form__span__description">50</span>
+                  <span class="links__form__block__description">50</span>
                 </span>
-                <div class="link__form__submit-block submit-block">
+                <div class="links__form__submit-block submit-block">
                   <button class="submit-block__button" type="submit">
                     СОЗДАТЬ
                   </button>
-                  <p class="submit-block__descr">
+                  <p class="submit-block__description">
                     Подборка не будет опубликована. Вы сможете добавить продукты
                     и внести правки
                   </p>
                 </div>
               </form>
+            </div>
+
+            <div class="creation__test creation__block">
+              <label for="" class="download__block__wrap wrap">
+                <input type="file" class="wrap__input" />
+                <img src="./assets/images/download.svg" alt="download-button" />
+                <div class="wrap__content">
+                  <p class="wrap__content__text wrap__content__text_1">
+                    Перетащите файл или
+                    <span class="wrap__content__text wrap__content__text_2"
+                      >загрузите с компьютера</span
+                    >
+                  </p>
+                  <p class="wrap__content__text wrap__content__text_3">
+                    Соотношение 1:1. Минимальный размер 1242х1242 px
+                  </p>
+                </div>
+                <span class="wrap__content__error"
+                  >Слишком маленький размер изображения</span
+                >
+              </label>
+
+              <span class="creation__content__span">
+                <input
+                  type="text"
+                  name="description"
+                  id=""
+                  placeholder="Дескриптор"
+                  value="OnionOnionOnionOnionOnionOnionOnionOnion"
+                />
+                <span class="creation__content__span__description">30</span>
+                <span class="creation__content__span__error">
+                  Название превышает 30 знаков
+                </span>
+              </span>
             </div>
           </div>
         </div>

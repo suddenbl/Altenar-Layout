@@ -1,14 +1,15 @@
+$white: #fff;
+$text-primary: #000;
+$text-secondary: rgba(0, 0, 0, 0.54);
+$text-disabled: rgba(0, 0, 0, 0.38);
+
 $primary-main: #2196f3;
 $primary-dark: #0b79d0;
-$primary-contast-text: #ffffff;
-$primary-hover-4-p: rgba(33, 150, 243, 0.04);
-$primary-active-24-p: rgba(33, 150, 243, 0.24);
-$action-hover-4-p: rgba(0, 0, 0, 0.04);
-$text-disabled: rgba(0, 0, 0, 0.38);
-$text-primary: #000000de;
-$text-secondary-54-p: rgba(0, 0, 0, 0.54);
+$background-header-color: rgba(0, 0, 0, 0.04);
+
+$error-color: #f44336;
 $grey-300: #e0e0e0;
 $grey-900: #212121;
+$scroll-color: #bdbdbd;
 
-$warning-contrast-text: rgba(0, 0, 0, 0.87);
 $font-size-normal: 14px;

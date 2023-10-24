@@ -30,8 +30,117 @@ a {
   text-decoration: none;
 }
 
+.creation__test {
+  .wrap {
+    position: relative;
+    border: 1px dashed $error-color;
+    padding: 35px 37px 30px;
+    display: flex;
+    gap: 16px;
+    margin-bottom: 50px;
+    &__input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      border: 0;
+      outline: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .wrap__content {
+      .wrap__content__text {
+        font-size: 14px;
+        line-height: 20px;
+        &_2 {
+          color: $primary-main;
+        }
+        &_3 {
+          font-size: 12px;
+          color: $text-secondary;
+        }
+      }
+      &__error {
+        position: absolute;
+        bottom: -23px;
+        left: 110px;
+
+        padding: 4px 8px;
+
+        border-radius: 4px;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 14px; /* 140% */
+        background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.9) 0%,
+            rgba(255, 255, 255, 0.9) 100%
+          ),
+          #f44336;
+        color: rgb(125, 23, 35);
+      }
+    }
+  }
+
+  .creation__content__span {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+    input {
+      width: 100%;
+    }
+
+    &__description {
+      position: absolute;
+      top: 20px;
+      right: 12px;
+      color: $text-secondary;
+    }
+
+    &__error {
+      position: absolute;
+      bottom: -22px;
+      left: 2px;
+
+      color: $error-color;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px; /* 166.667% */
+      letter-spacing: 0.4px;
+    }
+  }
+
+  input {
+    padding: 17px 11px;
+    border: none;
+    border: 1px solid $error-color;
+    border-radius: 4px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 1px;
+  border-radius: 10px;
+  background-color: $scroll-color;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
 .header {
-  background-color: $action-hover-4-p;
+  background-color: $background-header-color;
   &__container {
     @include container;
     padding: 25px 0 25px;
@@ -43,11 +152,11 @@ a {
     gap: 8px;
     font-size: $font-size-normal;
     line-height: 20px;
-    color: $text-secondary-54-p;
+    color: $text-secondary;
   }
 
-  &__descr {
-    .header__title {
+  &__description {
+    &__title {
       margin-bottom: 15px;
       font-size: 36px;
       font-style: normal;
@@ -55,14 +164,14 @@ a {
       line-height: 32px;
     }
 
-    .header__text {
+    &__text {
       display: inline-block;
       max-width: 27%;
       font-size: $font-size-normal;
       line-height: 20px;
-      color: $text-secondary-54-p;
+      color: $text-secondary;
 
-      .header__text_link {
+      &__link {
         color: $primary-main;
       }
     }
@@ -99,8 +208,8 @@ main {
     line-height: 32px;
   }
 
-  &__descr {
-    color: $text-secondary-54-p;
+  &__description {
+    color: $text-secondary;
     margin-bottom: 23px;
     font-size: $font-size-normal;
     line-height: 20px;
@@ -121,11 +230,11 @@ main {
         width: 100%;
       }
 
-      &__descr {
+      &__description {
         position: absolute;
         top: 20px;
         right: 12px;
-        color: $text-secondary-54-p;
+        color: $text-secondary;
       }
     }
 
@@ -180,7 +289,7 @@ main {
             }
             &_3 {
               font-size: 12px;
-              color: $text-secondary-54-p;
+              color: $text-secondary;
             }
           }
         }
@@ -213,7 +322,7 @@ main {
 
   &__read {
     max-width: 93.5%;
-    &__descr {
+    &__description {
       margin-bottom: 24px;
     }
     .switch {
@@ -256,7 +365,7 @@ main {
           width: 17px;
           left: 3px;
           bottom: 3px;
-          background-color: $primary-contast-text;
+          background-color: $white;
           border-radius: 17px;
           transition: transform 0.3s ease-in-out;
         }
@@ -275,7 +384,7 @@ main {
     }
   }
 
-  &__link {
+  &__links {
     max-width: 93.5%;
 
     &__form {
@@ -283,7 +392,7 @@ main {
       flex-direction: column;
       gap: 17px;
 
-      .link__form__span {
+      .links__form__block {
         position: relative;
         display: inline-block;
         width: 100%;
@@ -299,7 +408,7 @@ main {
           outline: 1px solid $primary-main;
         }
 
-        .span__label__input {
+        .block__label__input {
           position: absolute;
           opacity: 0;
           overflow: hidden;
@@ -312,7 +421,7 @@ main {
           left: 10px;
         }
 
-        .link__form__span__description {
+        .links__form__block__description {
           position: absolute;
           top: 20px;
           right: 12px;
@@ -320,15 +429,15 @@ main {
         }
       }
 
-      .link__form__span_last {
+      .links__form__block_last {
         margin-bottom: 50px;
       }
 
-      .form__span__label__input_last {
+      .form__block__label__input_last {
         padding-left: 40px;
       }
 
-      .span-last {
+      .block-last {
         margin-bottom: 46px;
       }
 
@@ -342,7 +451,7 @@ main {
           width: 100%;
           padding: 8px 22px;
           background-color: $primary-main;
-          color: $primary-contast-text;
+          color: $white;
           border-radius: 4px;
           font-size: 15px;
           font-weight: 500;
@@ -354,14 +463,14 @@ main {
           @include button-hover;
         }
 
-        &__descr {
+        &__description {
           margin-bottom: 30px;
           max-width: 80%;
           font-size: 12px;
           font-weight: 400;
           line-height: normal;
           letter-spacing: 0.4px;
-          color: $text-secondary-54-p;
+          color: $text-secondary;
           text-align: center;
         }
       }
@@ -422,7 +531,7 @@ main {
         width: 100%;
 
         &__time {
-          color: $primary-contast-text;
+          color: $white;
           font-size: 11px;
           font-style: normal;
           font-weight: 600;

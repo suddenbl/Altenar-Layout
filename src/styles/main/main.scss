@@ -10,7 +10,7 @@
 
 body {
   margin: 0 auto;
-  background-color: white;
+  background-color: $white;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -36,44 +36,44 @@ button {
 
 .header {
   margin-bottom: 24px;
-  background-color: $action-hover-4-p;
+  background-color: $background-header-color;
   &__container {
     @include container;
     padding: 59px 0 0;
   }
 
-  &__top {
+  &__information {
     display: flex;
     justify-content: space-between;
     margin-bottom: 41px;
-    .header__descr {
-      .header__title {
+    &__description {
+      .description__title {
         margin-bottom: 17px;
         font-size: 36px;
         font-style: normal;
         font-weight: 500;
         line-height: 32px;
       }
-      .header__text {
-        color: $text-secondary-54-p;
+      .description__text {
+        color: $text-secondary;
         font-style: normal;
         font-weight: 400;
         line-height: 20px;
       }
     }
 
-    .header__button {
+    &__link {
       @include button-main;
     }
 
-    .header__button:hover {
+    &__link:hover {
       @include button-hover;
     }
   }
 
-  &__bottom {
+  &__socials {
     display: flex;
-    .header__button_low {
+    .button_low {
       @include button-reset;
       width: 165px;
       padding-bottom: 5px;
@@ -89,98 +89,77 @@ button {
       letter-spacing: 0.3px;
       text-transform: uppercase;
     }
-    .header__button_low--disabled {
+    .button_low--disabled {
       border: none;
       color: $text-disabled;
     }
   }
 }
 
-.posts {
+.compilations {
   &__container {
     @include container;
-  }
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 4fr 1.7fr 100px;
+    grid-gap: 24px 0px;
 
-  .posts__table {
-    width: 100%;
-    .table__row {
-      th {
-        padding: 0 0 28px 0;
-        text-align: start;
-        font-size: 14px;
-        font-weight: 500;
-      }
+    .compilations__item {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+      align-items: center;
 
-      &__column_2 {
-        width: 27.8%;
-        time {
-          padding-left: 18px;
+      font-size: $font-size-normal;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0.15px;
+
+      &__description {
+        &__name {
+          @include description-name;
         }
-      }
-
-      &__column_3 {
-        width: 7.3%;
-      }
-
-      &__column {
-        padding: 0 0 22px 0;
-        &__block {
-          display: flex;
-          gap: 15px;
-          align-items: center;
-
-          &_img {
-            border-radius: 4px;
-          }
-
-          &_main {
-            font-size: 14px;
-          }
+        &__additional {
+          @include description-additional;
         }
-
-        &__block_2 {
-          padding-top: 3px;
-          gap: 8px;
-        }
-
-        &__block_buttons {
-          gap: 0;
-          justify-content: space-between;
-        }
-      }
-
-      .column__small {
-        font-size: 12px;
-        color: $text-disabled;
       }
     }
 
-    .table__links-item {
-      @include button-reset;
-      width: 24px;
-      height: 24px;
-      border-radius: 40px;
-      transition: background-color 0.3s ease-in-out;
-
-      svg {
-        fill: $text-secondary-54-p;
-        transition: fill 0.3s ease-in-out;
+    .post {
+      img {
+        border-radius: 4px;
       }
     }
-
-    .table__links-item:hover {
-      background-color: $primary-hover-4-p;
-      svg {
-        filter: invert(70%) sepia(65%) saturate(6190%) hue-rotate(185deg)
-          brightness(97%) contrast(96%);
+    .publish {
+      gap: 10px;
+      img {
+        width: 9px;
+        height: 9px;
+        margin-bottom: 25px;
       }
     }
+    .links {
+      justify-content: space-between;
+      &__button {
+        @include button-reset;
+        width: 24px;
+        height: 24px;
+        border-radius: 24px;
+      }
 
-    .table__links-item:active {
-      background-color: $primary-active-24-p;
-      svg {
-        filter: invert(70%) sepia(65%) saturate(6190%) hue-rotate(185deg)
-          brightness(97%) contrast(96%);
+      &__button:hover {
+        background-color: rgba(33, 150, 243, 0.04);
+        img {
+          @include small-buttons-change-color;
+        }
+      }
+
+      &__button:active {
+        background-color: rgba(33, 150, 243, 0.24);
+        img {
+          @include small-buttons-change-color;
+        }
       }
     }
   }

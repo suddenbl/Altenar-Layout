@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="./styles/main/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
@@ -19,20 +17,24 @@
   <body>
     <header class="header">
       <div class="header__container container">
-        <div class="header__top">
-          <div class="header__descr">
-            <h1 class="header__title">Социальные сети</h1>
-            <h4 class="header__text">Делитесь постами из соцсетей</h4>
+        <div class="header__information">
+          <div class="header__information__description description">
+            <h1 class="description__title">Социальные сети</h1>
+            <h4 class="description__text">Делитесь постами из соцсетей</h4>
           </div>
-          <a href="./create.html" role="button" class="header__button">
+          <a
+            href="./create.html"
+            role="button"
+            class="header__information__link"
+          >
             <img src="./assets/images/button-plus.svg" alt="Plus" />
             ДОБАВИТЬ
           </a>
         </div>
-        <div class="header__bottom">
-          <button class="header__button header__button_low">INSTAGRAM</button>
+        <div class="header__socials">
+          <button class="header__socials__button button_low">INSTAGRAM</button>
           <button
-            class="header__button header__button_low header__button_low--disabled"
+            class="header__social__button button_low button_low--disabled"
           >
             VKONTAKTE
           </button>
@@ -40,467 +42,239 @@
       </div>
     </header>
     <main>
-      <section class="posts">
-        <div class="posts__container">
-          <table class="posts__table table">
-            <tr class="table__row">
-              <th class="table__row__column table__row__column_1">Пост</th>
-              <th class="table__row__column table__row__column_2">
-                Опубликовано
-              </th>
-              <th class="table__row__column table__row__column_3">Ссылка</th>
-            </tr>
-            <tr class="table__row">
-              <td class="table__row__column column table__row__column_1">
-                <div class="table__row__column__block">
-                  <img
-                    class="table__row__column__block_img"
-                    src="./assets/images/onion-small.jpg"
-                    alt="Picture"
-                  />
-                  <div>
-                    <p class="table__row__column__block_main">Onion</p>
-                    <small class="column__small">@altenar</small>
-                  </div>
-                </div>
-              </td>
-              <td class="table__row__column table__row__column_2">
-                <div
-                  class="table__row__column__block table__row__column__block_2"
-                >
-                  <img
-                    src="./assets/images/tooltip-success.svg"
-                    alt="success"
-                  />
-                  <p class="table__row__column__block_main">altenar</p>
-                </div>
-                <time class="column__small" datetime="">25/02/2022</time>
-              </td>
-              <td class="table__row__column table__row__column_3">
-                <div
-                  class="table__row__column__block table__row__column__block_buttons"
-                >
-                  <button class="table__links-item">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clip-path="url(#clip0_21_7945)">
-                        <path
-                          d="M3.9 12C3.9 10.29 5.29 8.9 7 8.9H11V7H7C4.24 7 2 9.24 2 12C2 14.76 4.24 17 7 17H11V15.1H7C5.29 15.1 3.9 13.71 3.9 12ZM8 13H16V11H8V13ZM17 7H13V8.9H17C18.71 8.9 20.1 10.29 20.1 12C20.1 13.71 18.71 15.1 17 15.1H13V17H17C19.76 17 22 14.76 22 12C22 9.24 19.76 7 17 7Z"
-                          fill=""
-                        />
-                      </g>
-                      <defs>
-                        <clippath id="clip0_21_7935">
-                          <rect width="24" height="24" fill="white" />
-                        </clippath>
-                      </defs>
-                    </svg>
-                  </button>
-                  <button class="table__links-item">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clip-path="url(#clip0_21_7939)">
-                        <path
-                          d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z"
-                          fill=""
-                          fill-opacity=""
-                        />
-                      </g>
-                      <defs>
-                        <clippath id="clip0_21_7939">
-                          <rect width="24" height="24" fill="white" />
-                        </clippath>
-                      </defs>
-                    </svg>
-                  </button>
-                </div>
-              </td>
-            </tr>
-            <tr class="table__row">
-              <td class="table__row__column column table__row__column_1">
-                <div class="table__row__column__block">
-                  <img
-                    class="table__row__column__block_img"
-                    src="./assets/images/onion-small.jpg"
-                    alt="Picture"
-                  />
-                  <div>
-                    <p class="table__row__column__block_main">Onion</p>
-                    <small class="column__small">@altenar</small>
-                  </div>
-                </div>
-              </td>
-              <td class="table__row__column table__row__column_2">
-                <div
-                  class="table__row__column__block table__row__column__block_2"
-                >
-                  <img src="./assets/images/tooltip-error.svg" alt="error" />
-                  <p class="table__row__column__block_main">altenar</p>
-                </div>
-                <time class="column__small" datetime="">25/02/2022</time>
-              </td>
-              <td class="table__row__column table__row__column_3">
-                <div
-                  class="table__row__column__block table__row__column__block_buttons"
-                >
-                  <button class="table__links-item">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clip-path="url(#clip0_21_7945)">
-                        <path
-                          d="M3.9 12C3.9 10.29 5.29 8.9 7 8.9H11V7H7C4.24 7 2 9.24 2 12C2 14.76 4.24 17 7 17H11V15.1H7C5.29 15.1 3.9 13.71 3.9 12ZM8 13H16V11H8V13ZM17 7H13V8.9H17C18.71 8.9 20.1 10.29 20.1 12C20.1 13.71 18.71 15.1 17 15.1H13V17H17C19.76 17 22 14.76 22 12C22 9.24 19.76 7 17 7Z"
-                          fill=""
-                        />
-                      </g>
-                      <defs>
-                        <clippath id="clip0_21_7345">
-                          <rect width="24" height="24" fill="white" />
-                        </clippath>
-                      </defs>
-                    </svg>
-                  </button>
-                  <button class="table__links-item">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clip-path="url(#clip0_21_7939)">
-                        <path
-                          d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z"
-                          fill=""
-                          fill-opacity=""
-                        />
-                      </g>
-                      <defs>
-                        <clippath id="clip0_21_1939">
-                          <rect width="24" height="24" fill="white" />
-                        </clippath>
-                      </defs>
-                    </svg>
-                  </button>
-                </div>
-              </td>
-            </tr>
-            <tr class="table__row">
-              <td class="table__row__column column table__row__column_1">
-                <div class="table__row__column__block">
-                  <img
-                    class="table__row__column__block_img"
-                    src="assets/images/onion-small.jpg"
-                    alt="Picture"
-                  />
-                  <div>
-                    <p class="table__row__column__block_main">Onion</p>
-                    <small class="column__small">@altenar</small>
-                  </div>
-                </div>
-              </td>
-              <td class="table__row__column table__row__column_2">
-                <div
-                  class="table__row__column__block table__row__column__block_2"
-                >
-                  <img
-                    src="./assets/images/tooltip-warning.svg"
-                    alt="warning"
-                  />
-                  <p class="table__row__column__block_main">altenar</p>
-                </div>
-                <time class="column__small" datetime="">25/02/2022</time>
-              </td>
-              <td class="table__row__column table__row__column_3">
-                <div
-                  class="table__row__column__block table__row__column__block_buttons"
-                >
-                  <button class="table__links-item">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clip-path="url(#clip0_21_7945)">
-                        <path
-                          d="M3.9 12C3.9 10.29 5.29 8.9 7 8.9H11V7H7C4.24 7 2 9.24 2 12C2 14.76 4.24 17 7 17H11V15.1H7C5.29 15.1 3.9 13.71 3.9 12ZM8 13H16V11H8V13ZM17 7H13V8.9H17C18.71 8.9 20.1 10.29 20.1 12C20.1 13.71 18.71 15.1 17 15.1H13V17H17C19.76 17 22 14.76 22 12C22 9.24 19.76 7 17 7Z"
-                          fill=""
-                        />
-                      </g>
-                      <defs>
-                        <clippath id="clip0_21_7925">
-                          <rect width="24" height="24" fill="white" />
-                        </clippath>
-                      </defs>
-                    </svg>
-                  </button>
-                  <button class="table__links-item">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clip-path="url(#clip0_21_7939)">
-                        <path
-                          d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z"
-                          fill=""
-                          fill-opacity=""
-                        />
-                      </g>
-                      <defs>
-                        <clippath id="clip0_21_7938">
-                          <rect width="24" height="24" fill="white" />
-                        </clippath>
-                      </defs>
-                    </svg>
-                  </button>
-                </div>
-              </td>
-            </tr>
-            <tr class="table__row">
-              <td class="table__row__column column table__row__column_1">
-                <div class="table__row__column__block">
-                  <img
-                    class="table__row__column__block_img"
-                    src="assets/images/onion-small.jpg"
-                    alt="Picture"
-                  />
-                  <div>
-                    <p class="table__row__column__block_main">Onion</p>
-                    <small class="column__small">@altenar</small>
-                  </div>
-                </div>
-              </td>
-              <td class="table__row__column table__row__column_2">
-                <div
-                  class="table__row__column__block table__row__column__block_2"
-                >
-                  <img src="./assets/images/tooltip-error.svg" alt="error" />
-                  <p class="table__row__column__block_main">altenar</p>
-                </div>
-                <time class="column__small" datetime="">25/02/2022</time>
-              </td>
-              <td class="table__row__column table__row__column_3">
-                <div
-                  class="table__row__column__block table__row__column__block_buttons"
-                >
-                  <button class="table__links-item">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clip-path="url(#clip0_21_7945)">
-                        <path
-                          d="M3.9 12C3.9 10.29 5.29 8.9 7 8.9H11V7H7C4.24 7 2 9.24 2 12C2 14.76 4.24 17 7 17H11V15.1H7C5.29 15.1 3.9 13.71 3.9 12ZM8 13H16V11H8V13ZM17 7H13V8.9H17C18.71 8.9 20.1 10.29 20.1 12C20.1 13.71 18.71 15.1 17 15.1H13V17H17C19.76 17 22 14.76 22 12C22 9.24 19.76 7 17 7Z"
-                          fill=""
-                        />
-                      </g>
-                      <defs>
-                        <clippath id="clip0_21_7947">
-                          <rect width="24" height="24" fill="white" />
-                        </clippath>
-                      </defs>
-                    </svg>
-                  </button>
-                  <button class="table__links-item">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clip-path="url(#clip0_21_7939)">
-                        <path
-                          d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z"
-                          fill=""
-                          fill-opacity=""
-                        />
-                      </g>
-                      <defs>
-                        <clippath id="clip0_21_7933">
-                          <rect width="24" height="24" fill="white" />
-                        </clippath>
-                      </defs>
-                    </svg>
-                  </button>
-                </div>
-              </td>
-            </tr>
-            <tr class="table__row">
-              <td class="table__row__column column table__row__column_1">
-                <div class="table__row__column__block">
-                  <img
-                    class="table__row__column__block_img"
-                    src="assets/images/onion-small.jpg"
-                    alt="Picture"
-                  />
-                  <div>
-                    <p class="table__row__column__block_main">Onion</p>
-                    <small class="column__small">@altenar</small>
-                  </div>
-                </div>
-              </td>
-              <td class="table__row__column table__row__column_2">
-                <div
-                  class="table__row__column__block table__row__column__block_2"
-                >
-                  <img
-                    src="./assets/images/tooltip-success.svg"
-                    alt="success"
-                  />
-                  <p class="table__row__column__block_main">altenar</p>
-                </div>
-                <time class="column__small" datetime="">25/02/2022</time>
-              </td>
-              <td class="table__row__column table__row__column_3">
-                <div
-                  class="table__row__column__block table__row__column__block_buttons"
-                >
-                  <button class="table__links-item">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clip-path="url(#clip0_21_7945)">
-                        <path
-                          d="M3.9 12C3.9 10.29 5.29 8.9 7 8.9H11V7H7C4.24 7 2 9.24 2 12C2 14.76 4.24 17 7 17H11V15.1H7C5.29 15.1 3.9 13.71 3.9 12ZM8 13H16V11H8V13ZM17 7H13V8.9H17C18.71 8.9 20.1 10.29 20.1 12C20.1 13.71 18.71 15.1 17 15.1H13V17H17C19.76 17 22 14.76 22 12C22 9.24 19.76 7 17 7Z"
-                          fill=""
-                        />
-                      </g>
-                      <defs>
-                        <clippath id="clip0_21_7945">
-                          <rect width="24" height="24" fill="white" />
-                        </clippath>
-                      </defs>
-                    </svg>
-                  </button>
-                  <button class="table__links-item">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clip-path="url(#clip0_21_7939)">
-                        <path
-                          d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z"
-                          fill=""
-                          fill-opacity=""
-                        />
-                      </g>
-                      <defs>
-                        <clippath id="clip0_21_7999">
-                          <rect width="24" height="24" fill="white" />
-                        </clippath>
-                      </defs>
-                    </svg>
-                  </button>
-                </div>
-              </td>
-            </tr>
-            <tr class="table__row">
-              <td class="table__row__column column table__row__column_1">
-                <div class="table__row__column__block">
-                  <img
-                    class="table__row__column__block_img"
-                    src="./assets/images/onion-small.jpg"
-                    alt="Picture"
-                  />
-                  <div>
-                    <p class="table__row__column__block_main">Onion</p>
-                    <small class="column__small">@altenar</small>
-                  </div>
-                </div>
-              </td>
-              <td class="table__row__column table__row__column_2">
-                <div
-                  class="table__row__column__block table__row__column__block_2"
-                >
-                  <img
-                    src="./assets/images/tooltip-success.svg"
-                    alt="success"
-                  />
-                  <p class="table__row__column__block_main">altenar</p>
-                </div>
-                <time class="column__small" datetime="">25/02/2022</time>
-              </td>
-              <td class="table__row__column table__row__column_3">
-                <div
-                  class="table__row__column__block table__row__column__block_buttons"
-                >
-                  <button class="table__links-item">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clip-path="url(#clip0_21_7945)">
-                        <path
-                          d="M3.9 12C3.9 10.29 5.29 8.9 7 8.9H11V7H7C4.24 7 2 9.24 2 12C2 14.76 4.24 17 7 17H11V15.1H7C5.29 15.1 3.9 13.71 3.9 12ZM8 13H16V11H8V13ZM17 7H13V8.9H17C18.71 8.9 20.1 10.29 20.1 12C20.1 13.71 18.71 15.1 17 15.1H13V17H17C19.76 17 22 14.76 22 12C22 9.24 19.76 7 17 7Z"
-                          fill=""
-                        />
-                      </g>
-                      <defs>
-                        <clippath id="clip0_21_7944">
-                          <rect width="24" height="24" fill="white" />
-                        </clippath>
-                      </defs>
-                    </svg>
-                  </button>
-                  <button class="table__links-item">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clip-path="url(#clip0_21_7939)">
-                        <path
-                          d="M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z"
-                          fill=""
-                          fill-opacity=""
-                        />
-                      </g>
-                      <defs>
-                        <clippath id="clip0_21_7931">
-                          <rect width="24" height="24" fill="white" />
-                        </clippath>
-                      </defs>
-                    </svg>
-                  </button>
-                </div>
-              </td>
-            </tr>
-          </table>
+      <section class="compilations">
+        <div class="compilations__container">
+          <div class="compilations__item compilations__item__post post">
+            Пост
+          </div>
+          <div class="compilations__item compilations__item__publish publish">
+            Опубликовано
+          </div>
+          <div class="compilations__item compilations__item__link link">
+            Ссылка
+          </div>
+          <div class="compilations__item compilations__item__post post">
+            <img src="./assets/images/onion-small.jpg" alt="Аватарка" />
+            <div class="compilations__item__description post__description">
+              <p
+                class="compilations__item__description__name post__description__name"
+              >
+                Onion
+              </p>
+              <p
+                class="compilations__item__description__additional post__description__additional"
+              >
+                @altenar
+              </p>
+            </div>
+          </div>
+          <div class="compilations__item compilations__item__publish publish">
+            <img src="./assets/images/tooltip-success.svg" alt="Success" />
+            <div class="compilations__item__description publish__description">
+              <p
+                class="compilations__item__description__name publish__description__name"
+              >
+                altenar
+              </p>
+              <time
+                class="compilations__item__description__additional publish__description__additional"
+                >25/02/2022</time
+              >
+            </div>
+          </div>
+          <div class="compilations__item compilations__item__links links">
+            <button class="links__button">
+              <img src="./assets/images/clip.svg" alt="clip" />
+            </button>
+            <button class="links__button">
+              <img src="./assets/images/kebab-button.svg" alt="kebab" />
+            </button>
+          </div>
+          <div class="compilations__item compilations__item__post post">
+            <img src="./assets/images/onion-small.jpg" alt="Аватарка" />
+            <div class="compilations__item__description post__description">
+              <p
+                class="compilations__item__description__name post__description__name"
+              >
+                Onion
+              </p>
+              <p
+                class="compilations__item__description__additional post__description__additional"
+              >
+                @altenar
+              </p>
+            </div>
+          </div>
+          <div class="compilations__item compilations__item__publish publish">
+            <img src="./assets/images/tooltip-error.svg" alt="error" />
+            <div class="compilations__item__description publish__description">
+              <p
+                class="compilations__item__description__name publish__description__name"
+              >
+                altenar
+              </p>
+              <time
+                class="compilations__item__description__additional publish__description__additional"
+                >25/02/2022</time
+              >
+            </div>
+          </div>
+          <div class="compilations__item compilations__item__links links">
+            <button class="links__button">
+              <img src="./assets/images/clip.svg" alt="clip" />
+            </button>
+            <button class="links__button">
+              <img src="./assets/images/kebab-button.svg" alt="kebab" />
+            </button>
+          </div>
+          <div class="compilations__item compilations__item__post post">
+            <img src="./assets/images/onion-small.jpg" alt="Аватарка" />
+            <div class="compilations__item__description post__description">
+              <p
+                class="compilations__item__description__name post__description__name"
+              >
+                Onion
+              </p>
+              <p
+                class="compilations__item__description__additional post__description__additional"
+              >
+                @altenar
+              </p>
+            </div>
+          </div>
+          <div class="compilations__item compilations__item__publish publish">
+            <img src="./assets/images/tooltip-warning.svg" alt="warning" />
+            <div class="compilations__item__description publish__description">
+              <p
+                class="compilations__item__description__name publish__description__name"
+              >
+                altenar
+              </p>
+              <time
+                class="compilations__item__description__additional publish__description__additional"
+                >25/02/2022</time
+              >
+            </div>
+          </div>
+          <div class="compilations__item compilations__item__links links">
+            <button class="links__button">
+              <img src="./assets/images/clip.svg" alt="clip" />
+            </button>
+            <button class="links__button">
+              <img src="./assets/images/kebab-button.svg" alt="kebab" />
+            </button>
+          </div>
+          <div class="compilations__item compilations__item__post post">
+            <img src="./assets/images/onion-small.jpg" alt="Аватарка" />
+            <div class="compilations__item__description post__description">
+              <p
+                class="compilations__item__description__name post__description__name"
+              >
+                Onion
+              </p>
+              <p
+                class="compilations__item__description__additional post__description__additional"
+              >
+                @altenar
+              </p>
+            </div>
+          </div>
+          <div class="compilations__item compilations__item__publish publish">
+            <img src="./assets/images/tooltip-error.svg" alt="error" />
+            <div class="compilations__item__description publish__description">
+              <p
+                class="compilations__item__description__name publish__description__name"
+              >
+                altenar
+              </p>
+              <time
+                class="compilations__item__description__additional publish__description__additional"
+                >25/02/2022</time
+              >
+            </div>
+          </div>
+          <div class="compilations__item compilations__item__links links">
+            <button class="links__button">
+              <img src="./assets/images/clip.svg" alt="clip" />
+            </button>
+            <button class="links__button">
+              <img src="./assets/images/kebab-button.svg" alt="kebab" />
+            </button>
+          </div>
+          <div class="compilations__item compilations__item__post post">
+            <img src="./assets/images/onion-small.jpg" alt="Аватарка" />
+            <div class="compilations__item__description post__description">
+              <p
+                class="compilations__item__description__name post__description__name"
+              >
+                Onion
+              </p>
+              <p
+                class="compilations__item__description__additional post__description__additional"
+              >
+                @altenar
+              </p>
+            </div>
+          </div>
+          <div class="compilations__item compilations__item__publish publish">
+            <img src="./assets/images/tooltip-success.svg" alt="Success" />
+            <div class="compilations__item__description publish__description">
+              <p
+                class="compilations__item__description__name publish__description__name"
+              >
+                altenar
+              </p>
+              <time
+                class="compilations__item__description__additional publish__description__additional"
+                >25/02/2022</time
+              >
+            </div>
+          </div>
+          <div class="compilations__item compilations__item__links links">
+            <button class="links__button">
+              <img src="./assets/images/clip.svg" alt="clip" />
+            </button>
+            <button class="links__button">
+              <img src="./assets/images/kebab-button.svg" alt="kebab" />
+            </button>
+          </div>
+          <div class="compilations__item compilations__item__post post">
+            <img src="./assets/images/onion-small.jpg" alt="Аватарка" />
+            <div class="compilations__item__description post__description">
+              <p
+                class="compilations__item__description__name post__description__name"
+              >
+                Onion
+              </p>
+              <p
+                class="compilations__item__description__additional post__description__additional"
+              >
+                @altenar
+              </p>
+            </div>
+          </div>
+          <div class="compilations__item compilations__item__publish publish">
+            <img src="./assets/images/tooltip-success.svg" alt="Success" />
+            <div class="compilations__item__description publish__description">
+              <p
+                class="compilations__item__description__name publish__description__name"
+              >
+                altenar
+              </p>
+              <time
+                class="compilations__item__description__additional publish__description__additional"
+                >25/02/2022</time
+              >
+            </div>
+          </div>
+          <div class="compilations__item compilations__item__links links">
+            <button class="links__button">
+              <img src="./assets/images/clip.svg" alt="clip" />
+            </button>
+            <button class="links__button">
+              <img src="./assets/images/kebab-button.svg" alt="kebab" />
+            </button>
+          </div>
         </div>
       </section>
     </main>

@@ -15,9 +15,18 @@
   border: 1px solid $primary-main;
   border-radius: 4px;
   background-color: $primary-main;
-  color: $primary-contast-text;
+  color: $white;
   cursor: pointer;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+@mixin button-reset {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 @mixin button-hover {
@@ -29,11 +38,24 @@
   color: rgba(0, 0, 0, 0.26);
 }
 
-@mixin button-reset {
-  padding: 0;
-  border: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
-  cursor: pointer;
+@mixin description-name {
+  color: $text-primary;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+@mixin description-additional {
+  color: $text-disabled;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.4px;
+}
+
+@mixin small-buttons-change-color {
+  filter: invert(63%) sepia(49%) saturate(7289%) hue-rotate(186deg)
+    brightness(102%) contrast(90%);
 }
